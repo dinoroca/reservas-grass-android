@@ -1,0 +1,20 @@
+<resources>
+    <!-- Colores para modo claro -->
+    <color name="colorPrimary">#01CD6B</color>
+    <color name="colorPrimaryDark">#4A8C42</color>
+    <color name="colorAccent">#E45656</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="darkGray">#000000</color>
+    <color name="mediumGray">#9E9E9E</color>
+    <color name="lightGray">#F5F5F5</color>
+
+    <!-- Colores para modo oscuro -->
+    <color name="colorPrimaryNight">#3E7A38</color>
+    <color name="colorPrimaryDarkNight">#2E5A2A</color>
+    <color name="colorAccentNight">#D97236</color>
+    <color name="backgroundDark">#121212</color>
+    <color name="surfaceDark">#1E1E1E</color>
+    <color name="onBackgroundDark">#E0E0E0</color>
+    <color name="textInputBorderColorNight">#9E9E9E</color>
+</resources>

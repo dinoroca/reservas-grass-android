@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainClientActivity">
+
+    <!-- Header: User profile and address -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/ivProfile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_person"
+            android:layout_marginEnd="16dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/rounded_image"/>
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Av. Argenina 1294 Callao"
+            android:textSize="16sp"
+            android:fontFamily="@font/ibm_regular"/>
+
+    </LinearLayout>
+
+    <!-- Search input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_margin="10dp"
+        android:hint="Buscar">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:fontFamily="@font/ibm_regular"
+            android:inputType="text"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Categories -->
+    <LinearLayout
+        android:id="@+id/categories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tilSearch"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:text="Categoría 1"
+            android:padding="8dp"
+            android:background="@drawable/category_background"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Categoría 2"
+            android:padding="8dp"
+            android:background="@drawable/category_background"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Categoría 3"
+            android:padding="8dp"
+            android:background="@drawable/category_background"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Categoría 4"
+            android:padding="8dp"
+            android:background="@drawable/category_background"/>
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/categories"
+        android:layout_above="@id/bottomNavigation"
+        android:fillViewport="true">
+        <!-- Food dishes in cards -->
+        <GridLayout
+            android:id="@+id/dishes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/categories"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:columnCount="2"
+            android:orientation="horizontal">
+
+            <!-- Dish 1 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/ivDish1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_food"
+                        android:scaleType="fitCenter"
+                        android:background="@drawable/rounded_image"
+                        android:adjustViewBounds="true" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        android:text="Empresa 1"
+                        android:paddingTop="12dp"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Descripcion del plato 1 descripcion descripcion"
+                        android:textAlignment="center"/>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Dish 2 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/ivDish2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_food"
+                        android:scaleType="fitCenter"
+                        android:background="@drawable/rounded_image"
+                        android:adjustViewBounds="true" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        android:text="Empresa 2"
+                        android:paddingTop="12dp"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Descripcion del plato 2 descripcion descripcion"
+                        android:textAlignment="center"/>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Dish 3 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/ivDish3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_food"
+                        android:scaleType="fitCenter"
+                        android:background="@drawable/rounded_image"
+                        android:adjustViewBounds="true" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        android:text="Plato 2"
+                        android:paddingTop="12dp"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Descripcion del plato 3 descripcion descripcion"
+                        android:textAlignment="center"/>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Dish 4 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/ivDish4"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_food"
+                        android:scaleType="fitCenter"
+                        android:background="@drawable/rounded_image"
+                        android:adjustViewBounds="true" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        android:text="Plato 2"
+                        android:paddingTop="12dp"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Descripcion del plato 4 descripcion descripcion"
+                        android:textAlignment="center"/>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </GridLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Bottom navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/bottom_navigation_menu"
+        android:backgroundTint="#B0B0B0"/>
+
+</RelativeLayout>

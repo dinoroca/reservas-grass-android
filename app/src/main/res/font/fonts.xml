@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Regular -->
+    <font
+        android:font="@font/ibm_regular"
+        android:fontStyle="normal"
+        android:fontWeight="400" />
+    <font
+        android:font="@font/ibm_italic"
+        android:fontStyle="italic"
+        android:fontWeight="400" />
+
+    <!-- Bold -->
+    <font
+        android:font="@font/ibm_bold"
+        android:fontStyle="normal"
+        android:fontWeight="700" />
+    <font
+        android:font="@font/ibm_bold_italic"
+        android:fontStyle="italic"
+        android:fontWeight="700" />
+
+    <!-- Light -->
+    <font
+        android:font="@font/ibm_light"
+        android:fontStyle="normal"
+        android:fontWeight="300" />
+    <font
+        android:font="@font/ibm_light_italic"
+        android:fontStyle="italic"
+        android:fontWeight="300" />
+
+    <!-- Medium -->
+    <font
+        android:font="@font/ibm_medium"
+        android:fontStyle="normal"
+        android:fontWeight="500" />
+    <font
+        android:font="@font/ibm_meadium_italic"
+        android:fontStyle="italic"
+        android:fontWeight="500" />
+
+    <!-- Extra Light -->
+    <font
+        android:font="@font/ibm_extra_light"
+        android:fontStyle="normal"
+        android:fontWeight="200" />
+    <font
+        android:font="@font/ibm_extra_light_italic"
+        android:fontStyle="italic"
+        android:fontWeight="200" />
+
+    <!-- Thin -->
+    <font
+        android:font="@font/ibm_thin"
+        android:fontStyle="normal"
+        android:fontWeight="100" />
+    <font
+        android:font="@font/ibm_thin_italic"
+        android:fontStyle="italic"
+        android:fontWeight="100" />
+
+    <!-- SemiBold -->
+    <font
+        android:font="@font/ibm_semibold"
+        android:fontStyle="normal"
+        android:fontWeight="600" />
+    <font
+        android:font="@font/ibm_semibold_italic"
+        android:fontStyle="italic"
+        android:fontWeight="600" />
+</font-family>
